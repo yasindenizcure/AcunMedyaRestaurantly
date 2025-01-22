@@ -11,8 +11,8 @@ namespace AcunMedyaRestaurantly.Entities
         public int ContactId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Subject { get; set; }
         [StringLength(250)]
+        public string Subject { get; set; }
         public bool IsRead { get; set; }
         public DateTime SendDate { get; set; }
         public string Message { get; set; }
