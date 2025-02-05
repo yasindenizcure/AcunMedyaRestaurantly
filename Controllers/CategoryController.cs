@@ -11,6 +11,7 @@ namespace AcunMedyaRestaurantly.Controllers
     public class CategoryController : Controller
     {
         RestaurantlyContext db = new RestaurantlyContext();
+        //GET: Category
         public ActionResult Index()
         {
             var value = db.Categories.ToList();
