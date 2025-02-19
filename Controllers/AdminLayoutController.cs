@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcunMedyaRestaurantly.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace AcunMedyaRestaurantly.Controllers
 {
     public class AdminLayoutController : Controller
     {
+        RestaurantlyContext db = new RestaurantlyContext();
         // GET: AdminLayout
         public ActionResult Index()
         {
@@ -19,7 +21,9 @@ namespace AcunMedyaRestaurantly.Controllers
         }
         public ActionResult PartialNavbar()
         {
-            return PartialView();
+            ViewBag.notificationIsreadByfalseCount=db.Notifications.Where(x=>x.IsRead=="False").Count();
+            var values = db.Notifications.Where(x=>x.IsRead=="False").ToList();
+            return PartialView(values);
         }
         public ActionResult PartialSidebar()
         {

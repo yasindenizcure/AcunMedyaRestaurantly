@@ -144,6 +144,7 @@
     <Compile Include="Entities\Chef.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Feature.cs" />
+    <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\Service.cs" />
@@ -163,6 +164,10 @@
     <Compile Include="Migrations\202502051939119_mig2create.cs" />
     <Compile Include="Migrations\202502051939119_mig2create.Designer.cs">
       <DependentUpon>202502051939119_mig2create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502191712591_mig3.cs" />
+    <Compile Include="Migrations\202502191712591_mig3.Designer.cs">
+      <DependentUpon>202502191712591_mig3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -5740,6 +5745,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202502051939119_mig2create.resx">
       <DependentUpon>202502051939119_mig2create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502191712591_mig3.resx">
+      <DependentUpon>202502191712591_mig3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
