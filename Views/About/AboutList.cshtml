@@ -1,8 +1,7 @@
-﻿@model List<AcunMedyaRestaurantly.Entities.Product>
+﻿@model List<AcunMedyaRestaurantly.Entities.About>
 @{
-    ViewBag.Title = "ProductList";
+    ViewBag.Title = "AboutList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    var count = 0;
 }
 
 <div class="row page-titles mx-0">
@@ -18,7 +17,7 @@
 <div class="container-fluid">
     <form method="get">
         <div class="form-group">
-            <input type="text" name="searchText" placeholder="Aranacak Kelime" class="form-control"/>
+            <input type="text" name="searchText" placeholder="Aranacak Kelime" class="form-control" />
             <button type="submit" class="btn btn-dark gradient-9">Ara</button>
         </div>
     </form>
@@ -29,17 +28,14 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        <h4>Kategori Listi</h4>
+                        <h4>Hakkında</h4>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Yemek Adı</th>
+                                    <th>Başlık</th>
                                     <th>Açıklama</th>
-                                    <th>Fiyat</th>
-                                    <th>Kategori</th>
                                     <th>Resim</th>
                                     <th>Sil</th>
                                     <th>Güncelle</th>
@@ -49,24 +45,17 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                    count++;
                                     <tr>
-                                        <th>@count</th>
-                                        <th>@item.Name</th>
+                                        <th>@item.Title</th>
                                         <td>@item.Description</td>
-                                        <td>@item.Price</td>
-                                        <td>@item.Category.CategoryName</td>
-                                        
-                                        
                                         <td><img src="@item.ImageUrl" style="width:100px; height:100px" /></td>
 
-                                        <td><a href="/Product/ProductDelete/@item.ProductId" class="btn btn-danger">
-                                                <i class="fa fa-close color-muted m-r-5"></i>
-                                            Sil
-                                            </a>
+                                        <td>
+                                            <a href="/About/AboutDelete/@item.AboutId" class="btn btn-danger">
+                                                <i class="fa fa-close color-muted m-r-5"></i>Sil</a>
                                         </td>
-                                       
-                                        <td><a href="/Product/ProductEdit/@item.ProductId" class="btn btn-info gradient-2">Güncelle</a></td>
+
+                                        <td><a href="/About/AboutEdit/@item.AboutId" class="btn btn-info gradient-2">Güncelle</a></td>
 
                                     </tr>
                                 }
@@ -74,7 +63,7 @@
 
                             </tbody>
                         </table>
-                        <a href="/Product/ProductUpdate" class="btn btn-success">Kategori Ekle</a>
+                        <a href="/About/AboutCreate" class="btn btn-success">Hakkında Ekle</a>
                     </div>
                 </div>
             </div>
