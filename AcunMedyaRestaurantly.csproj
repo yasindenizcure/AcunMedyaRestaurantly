@@ -144,7 +144,9 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Chef.cs" />
     <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Feature.cs" />
+    <Compile Include="Entities\Gallery.cs" />
     <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
@@ -174,6 +176,18 @@
     <Compile Include="Migrations\202502191814271_mig4.Designer.cs">
       <DependentUpon>202502191814271_mig4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202503031928563_Event.cs" />
+    <Compile Include="Migrations\202503031928563_Event.Designer.cs">
+      <DependentUpon>202503031928563_Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503031930319_Gallery.cs" />
+    <Compile Include="Migrations\202503031930319_Gallery.Designer.cs">
+      <DependentUpon>202503031930319_Gallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202503031953498_event2.cs" />
+    <Compile Include="Migrations\202503031953498_event2.Designer.cs">
+      <DependentUpon>202503031953498_event2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -197,6 +211,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Arda-Turkmen.jpg" />
+    <Content Include="images\dogum-gunu.jpg" />
+    <Content Include="images\Mehmet-Yalcinkaya.jpg" />
+    <Content Include="images\Refika-Birgul.jpg" />
+    <Content Include="images\restaurant1.png" />
+    <Content Include="images\restaurant2.jpeg" />
+    <Content Include="images\restaurant3.jpg" />
+    <Content Include="images\restaurant4.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -5711,10 +5733,11 @@
     <Content Include="Views\Dashboard\ReservationPartial.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\ChangePassword.cshtml" />
+    <Content Include="Views\Default\PartialEvent.cshtml" />
+    <Content Include="Views\Default\PartialGallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -5759,6 +5782,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202502191814271_mig4.resx">
       <DependentUpon>202502191814271_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503031928563_Event.resx">
+      <DependentUpon>202503031928563_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503031930319_Gallery.resx">
+      <DependentUpon>202503031930319_Gallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503031953498_event2.resx">
+      <DependentUpon>202503031953498_event2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

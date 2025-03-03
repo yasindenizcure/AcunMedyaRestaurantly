@@ -1,5 +1,4 @@
 ﻿@model List<AcunMedyaRestaurantly.Entities.Service>
-
 <section id="why-us" class="why-us">
     <div class="container" data-aos="fade-up">
 
@@ -8,11 +7,9 @@
             <p>Sizin Konforunuz Bizim İçin Çok Önemli!</p>
         </div>
 
-        @foreach (var item in Model)
-        {
-
-            <div class="row">
-
+        <div class="row">
+            @foreach (var item in Model)
+            {
                 <div class="col-lg-4">
                     <div class="box" data-aos="zoom-in" data-aos-delay="100">
                         <span>@item.ServiceId</span>
@@ -20,9 +17,8 @@
                         <p>@item.Description</p>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
 
     </div>
-   
 </section>

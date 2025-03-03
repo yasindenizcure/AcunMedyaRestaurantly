@@ -16,271 +16,96 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-cente">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.html">Restaurantly</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-            @Html.Action("PartialNavbar", "Default")
+        <h1 class="logo me-auto me-lg-0"><a href="index.html">Restaurantly</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        @Html.Action("PartialNavbar", "Default")
 
-            <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Rezervasyon Yap</a>
+        <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Rezervasyon Yap</a>
 
-        </div>
+    </div>
     </header><!-- End Header -->
     <!-- ======= Hero Section ======= -->
     @Html.Action("PartialFeature", "Default")
 
 
-<main id="main">
+    <main id="main">
 
-    <!-- ======= About Section ======= -->
-    @Html.Action("PartialAbout", "Default")
+        <!-- ======= About Section ======= -->
+        @Html.Action("PartialAbout", "Default")
 
-    <!-- End About Section -->
-    <!-- ======= Why Us Section ======= -->
-    @Html.Action("PartialService", "Default")
+        <!-- End About Section -->
+        <!-- ======= Why Us Section ======= -->
+        @Html.Action("PartialService", "Default")
 
-    <!-- End Why Us Section -->
-    <!-- ======= Menu Section ======= -->
-    @Html.Action("PartialMenu", "Default")
+        <!-- End Why Us Section -->
+        <!-- ======= Menu Section ======= -->
+        @Html.Action("PartialMenu", "Default")
 
-    <!-- End Menu Section -->
-    <!-- ======= Specials Section ======= -->
-    @Html.Action("PartialSpecial", "Default")
-    <!-- End Specials Section -->
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
-        <div class="container" data-aos="fade-up">
+        <!-- End Menu Section -->
+        <!-- ======= Specials Section ======= -->
+        @Html.Action("PartialSpecial", "Default")
+        <!-- End Specials Section -->
+        <!-- ======= Events Section ======= -->
+        @Html.Action("PartialEvent", "Default")<!-- End Events Section -->
+        <!-- ======= Book A Table Section ======= -->
+        <!-- End Book A Table Section -->
+        <section id="book-a-table" class="book-a-table">
+            <div class="container" data-aos="fade-up">
 
-            <div class="section-title">
-                <h2>Events</h2>
-                <p>Organize Your Events in our Restaurant</p>
+                <div class="section-title">
+                    <h2>Rezervasyon</h2>
+                    <p>Rezerve Et!</p>
+                </div>
+                @if (ViewBag.Message != null)
+                {
+                    <script>alert('@ViewBag.Message')</script>
+                }
+                @Html.Action("PartialBookATable", "Default")
+            </div>
+        </section>
+        <!-- ======= Testimonials Section ======= -->
+        @Html.Action("PartialTestimonial", "Default")
+        <!-- End Testimonials Section -->
+        <!-- ======= Gallery Section ======= -->
+        @Html.Action("PartialGallery", "Default")<!-- End Gallery Section -->
+        <!-- ======= Chefs Section ======= -->
+        @Html.Action("PartialChef", "Default")
+        <!-- End Chefs Section -->
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>İletişim</h2>
+                    <p>Bizimle İletişime Geçin!</p>
+                </div>
             </div>
 
-            <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="row event-item">
-                            <div class="col-lg-6">
-                                <img src="assets/img/event-birthday.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Birthday Parties</h3>
-                                <div class="price">
-                                    <p><span>$189</span></p>
-                                </div>
-                                <p class="fst-italic">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua.
-                                </p>
-                                <ul>
-                                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                </ul>
-                                <p>
-                                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum dolore eu fugiat nulla pariatur
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="row event-item">
-                            <div class="col-lg-6">
-                                <img src="assets/img/event-private.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Private Parties</h3>
-                                <div class="price">
-                                    <p><span>$290</span></p>
-                                </div>
-                                <p class="fst-italic">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua.
-                                </p>
-                                <ul>
-                                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                </ul>
-                                <p>
-                                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum dolore eu fugiat nulla pariatur
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="row event-item">
-                            <div class="col-lg-6">
-                                <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                                <h3>Custom Parties</h3>
-                                <div class="price">
-                                    <p><span>$99</span></p>
-                                </div>
-                                <p class="fst-italic">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua.
-                                </p>
-                                <ul>
-                                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                </ul>
-                                <p>
-                                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum dolore eu fugiat nulla pariatur
-                                </p>
-                            </div>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section><!-- End Events Section -->
-    <!-- ======= Book A Table Section ======= -->
-    <!-- End Book A Table Section -->
-    <section id="book-a-table" class="book-a-table">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Rezervasyon</h2>
-                <p>Rezerve Et!</p>
-            </div>
-            @if (ViewBag.Message != null)
-            {
-                <script>alert('@ViewBag.Message')</script>
-            }
-            @Html.Action("PartialBookATable", "Default")
-        </div>
-    </section>
-    <!-- ======= Testimonials Section ======= -->
-    @Html.Action("PartialTestimonial", "Default")
-    <!-- End Testimonials Section -->
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Gallery</h2>
-                <p>Some photos from Our Restaurant</p>
-            </div>
-        </div>
-
-        <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="row g-0">
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                            <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
+            <div data-aos="fade-up">
+                <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24133.33943111532!2d29.260967352024828!3d40.87917211860361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadc9f835830e9%3A0xf5e15cbe86630278!2sPendik%2C%20Kaynarca%2C%2034890%20Pendik%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1741032993330!5m2!1str!2str" frameborder="0" allowfullscreen></iframe>
 
             </div>
 
-        </div>
-    </section><!-- End Gallery Section -->
-    <!-- ======= Chefs Section ======= -->
-    @Html.Action("PartialChef", "Default")
-    <!-- End Chefs Section -->
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
+            <div class="container" data-aos="fade-up">
 
-            <div class="section-title">
-                <h2>Contact</h2>
-                <p>Contact Us</p>
+                @Html.Action("PartialAdress", "Default")
+
+                @if (ViewBag.Message != null)
+                {
+                    <script>alert('@ViewBag.Message')</script>
+                }
+                <br />
+                @Html.Action("PartialContact", "Default")
+
             </div>
-        </div>
 
-        <div data-aos="fade-up">
-            <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-        </div>
+        </section><!-- End Contact Section -->
+        <!-- End Contact Section -->
 
-        <div class="container" data-aos="fade-up">
-
-            @Html.Action("PartialAdress", "Default")
-
-            @if (ViewBag.Message != null)
-            {
-                <script>alert('@ViewBag.Message')</script>
-            }
-            @Html.Action("PartialContact", "Default")
-
-        </div>
-
-    </section><!-- End Contact Section -->
-    <!-- End Contact Section -->
-
-</main><!-- End #main -->
+    </main><!-- End #main -->
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="footer-top">
@@ -291,10 +116,10 @@
                         <div class="footer-info">
                             <h3>Restaurantly</h3>
                             <p>
-                                A108 Adam Street <br>
-                                NY 535022, USA<br><br>
-                                <strong>Phone:</strong> +1 5589 55488 55<br>
-                                <strong>Email:</strong> info@example.com<br>
+                                Maslak 1453 NeoTech Kampüsü <br>
+                                34398, Sarıyer/İstanbul<br><br>
+                                <strong>Telefon:</strong> +90 500 400 3020<br>
+                                <strong>Email:</strong> yasindenizcure@gmail.com<br>
                             </p>
                             <div class="social-links mt-3">
                                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -307,32 +132,32 @@
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+                        <h4>Yararlı Bağlantılar</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#hero">Ana Sayfa</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">Hakkımızda</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Servislerimiz</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Hizmet Şartları</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Gizlilik Politikası</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
+                        <h4>Hizmetlerimiz</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Tasarım</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Geliştirme</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Ürün Yönetimi</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Pazarlama</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Grafik Tasarım</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <h4>Bülten</h4>
+                        <p>Yeni gelişmelerden haberdar olmak için..</p>
                         <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                            <input type="email" name="email"><input type="submit" value="Abone Olun">
                         </form>
 
                     </div>
@@ -343,14 +168,14 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>Restaurantly</span></strong>. Tüm hakları saklıdır.
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="https://acunmedyaakademi.com/">AcunMedyaAkademi</a>
             </div>
         </div>
     </footer><!-- End Footer -->

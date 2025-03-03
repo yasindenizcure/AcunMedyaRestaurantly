@@ -104,6 +104,15 @@ namespace AcunMedyaRestaurantly.Controllers
             ViewBag.OpenHours = db.Adresses.Select(x => x.OpenHours).FirstOrDefault();
             return PartialView();
         }
-
+        public PartialViewResult PartialEvent() 
+        {
+            var value = db.Events.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult PartialGallery()
+        {
+            var value = db.Galleries.ToList();
+            return PartialView(value);
+        }
     }
 }
