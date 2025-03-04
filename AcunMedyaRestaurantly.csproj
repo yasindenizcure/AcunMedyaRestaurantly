@@ -134,6 +134,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -5752,6 +5753,9 @@
     <Content Include="Views\Testimonial\TestimonialList.cshtml" />
     <Content Include="Views\Testimonial\TestimonialEdit.cshtml" />
     <Content Include="Views\Testimonial\TestimonialCreate.cshtml" />
+    <Content Include="Views\Gallery\GalleryList.cshtml" />
+    <Content Include="Views\Gallery\GalleryCreate.cshtml" />
+    <Content Include="Views\Gallery\GalleryEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

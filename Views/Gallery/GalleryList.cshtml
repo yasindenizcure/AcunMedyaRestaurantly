@@ -1,15 +1,13 @@
-﻿@model List<AcunMedyaRestaurantly.Entities.Special>
+﻿@model List<AcunMedyaRestaurantly.Entities.Gallery>
 @{
-    ViewBag.Title = "SpecialList";
+    ViewBag.Title = "GalleryList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
-
 <div class="row page-titles mx-0">
     <div class="col p-md-0">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Spesiyaller</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Galeri</a></li>
         </ol>
     </div>
 </div>
@@ -29,15 +27,12 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        <h4>Spesiyal</h4>
+                        <h4>Galeri</h4>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Başlık</th>
-                                    <th>Özet</th>
-                                    <th>Açıklama</th>
                                     <th>Resim</th>
                                     <th>Sil</th>
                                     <th>Güncelle</th>
@@ -48,18 +43,15 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <th>@item.Title</th>
-                                        <td>@item.ShortDescription</td>
-                                        <td>@item.FullDescription</td>
                                         <td><img src="@item.ImageUrl" style="width:100px; height:100px" /></td>
 
                                         <td>
-                                            <a href="/Special/SpecialDelete/@item.SpecialId" class="btn btn-danger">
+                                            <a href="/Gallery/GalleryDelete/@item.GalleryId" class="btn btn-danger">
                                                 <i class="fa fa-close color-muted m-r-5"></i>Sil
                                             </a>
                                         </td>
 
-                                        <td><a href="/Special/SpecialEdit/@item.SpecialId" class="btn btn-info gradient-2">Güncelle</a></td>
+                                        <td><a href="/Gallery/GalleryEdit/@item.GalleryId" class="btn btn-info gradient-2">Güncelle</a></td>
 
                                     </tr>
                                 }
@@ -67,7 +59,7 @@
 
                             </tbody>
                         </table>
-                        <a href="/Special/SpecialCreate" class="btn btn-success">Spesiyal Ekle</a>
+                        <a href="/Gallery/GalleryCreate" class="btn btn-success">Galeri Ekle</a>
                     </div>
                 </div>
             </div>
