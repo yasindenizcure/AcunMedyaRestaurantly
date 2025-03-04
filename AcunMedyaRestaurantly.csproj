@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\BookATableController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -5780,6 +5781,9 @@
     <Content Include="Views\BookATable\BookATableCreate.cshtml" />
     <Content Include="Views\BookATable\BookATableList.cshtml" />
     <Content Include="Views\BookATable\BookATableEdit.cshtml" />
+    <Content Include="Views\Chef\ChefList.cshtml" />
+    <Content Include="Views\Chef\ChefCreate.cshtml" />
+    <Content Include="Views\Chef\ChefEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

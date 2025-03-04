@@ -1,15 +1,13 @@
-﻿@model List<AcunMedyaRestaurantly.Entities.Product>
+﻿@model List<AcunMedyaRestaurantly.Entities.Chef>
 @{
-    ViewBag.Title = "ProductList";
+    ViewBag.Title = "ChefList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    var count = 0;
 }
-
 <div class="row page-titles mx-0">
     <div class="col p-md-0">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Ürünler</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Şef</a></li>
         </ol>
     </div>
 </div>
@@ -18,7 +16,7 @@
 <div class="container-fluid">
     <form method="get">
         <div class="form-group">
-            <input type="text" name="searchText" placeholder="Aranacak Kelime" class="form-control"/>
+            <input type="text" name="searchText" placeholder="Aranacak Kelime" class="form-control" />
             <button type="submit" class="btn btn-dark gradient-9">Ara</button>
         </div>
     </form>
@@ -29,17 +27,14 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        <h4>Ürünler Listesi</h4>
+                        <h4>Şefler</h4>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Yemek Adı</th>
+                                    <th>Başlık</th>
                                     <th>Açıklama</th>
-                                    <th>Fiyat</th>
-                                    <th>Kategori</th>
                                     <th>Resim</th>
                                     <th>Sil</th>
                                     <th>Güncelle</th>
@@ -49,24 +44,18 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                    count++;
                                     <tr>
-                                        <th>@count</th>
                                         <th>@item.Name</th>
-                                        <td>@item.Description</td>
-                                        <td>@item.Price</td>
-                                        <td>@item.Category.CategoryName</td>
-                                        
-                                        
+                                        <th>@item.Title</th>
                                         <td><img src="@item.ImageUrl" style="width:100px; height:100px" /></td>
 
-                                        <td><a href="/Product/ProductDelete/@item.ProductId" class="btn btn-danger">
-                                                <i class="fa fa-close color-muted m-r-5"></i>
-                                            Sil
+                                        <td>
+                                            <a href="/Chef/ChefDelete/@item.ChefId" class="btn btn-danger">
+                                                <i class="fa fa-close color-muted m-r-5"></i>Sil
                                             </a>
                                         </td>
-                                       
-                                        <td><a href="/Product/ProductEdit/@item.ProductId" class="btn btn-info gradient-2">Güncelle</a></td>
+
+                                        <td><a href="/Chef/ChefEdit/@item.ChefId" class="btn btn-info gradient-2">Güncelle</a></td>
 
                                     </tr>
                                 }
@@ -74,7 +63,7 @@
 
                             </tbody>
                         </table>
-                        <a href="/Product/ProductUpdate" class="btn btn-success">Ürün Ekle</a>
+                        <a href="/Chef/ChefCreate" class="btn btn-success"> Şef Ekle</a>
                     </div>
                 </div>
             </div>
