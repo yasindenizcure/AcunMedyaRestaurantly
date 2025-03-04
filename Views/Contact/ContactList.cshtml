@@ -1,0 +1,79 @@
+﻿@model List<AcunMedyaRestaurantly.Entities.Contact>
+@{
+    ViewBag.Title = "ContactList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">İletişim</a></li>
+        </ol>
+    </div>
+</div>
+<!-- row -->
+
+<div class="container-fluid">
+    <form method="get">
+        <div class="form-group">
+            <input type="text" name="searchText" placeholder="Aranacak Kelime" class="form-control" />
+            <button type="submit" class="btn btn-dark gradient-9">Ara</button>
+        </div>
+    </form>
+    <div class="row">
+
+        <!-- /# column -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>İletişim</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Ad</th>
+                                    <th>Email</th>
+                                    <th>Başlık</th>
+                                    <th>Okundu Mu</th>
+                                    <th>Gönderilen Tarih</th>
+                                    <th>Mesaj</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <th>@item.Name</th>
+                                            <th>@item.Email</th>
+                                            <td>@item.Subject</td>
+                                            <td>@item.IsRead</td>
+                                            <td>@item.SendDate</td>
+                                            <td>@item.Message</td>
+
+                                            <td>
+                                                <a href="/Contact/ContactDelete/@item.ContactId" class="btn btn-danger">
+                                                    <i class="fa fa-close color-muted m-r-5"></i>Sil
+                                                </a>
+                                            </td>
+
+                                            <td><a href="/Contact/ContactEdit/@item.ContactId" class="btn btn-info gradient-2">Güncelle</a></td>
+
+                                        </tr>
+                                    }
+
+                            </tbody>
+                        </table>
+                        <a href="/Contact/ContactCreate" class="btn btn-success">İletşim Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+
+    </div>
+</div>

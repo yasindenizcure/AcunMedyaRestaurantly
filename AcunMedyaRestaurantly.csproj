@@ -131,6 +131,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SpecialController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Admin.cs" />
@@ -225,6 +227,7 @@
     <Content Include="images\is-yemegi.jpg" />
     <Content Include="images\mc-ferran-adria.jpg" />
     <Content Include="images\Mehmet-Yalcinkaya.jpg" />
+    <Content Include="images\pp2.jpg" />
     <Content Include="images\Refika-Birgul.jpg" />
     <Content Include="images\restaurant1.png" />
     <Content Include="images\restaurant2.jpeg" />
@@ -5769,6 +5772,10 @@
     <Content Include="Views\Reservation\Index.cshtml" />
     <Content Include="Views\Reservation\ReservationEdit.cshtml" />
     <Content Include="Views\Reservation\ReservationCreate.cshtml" />
+    <Content Include="Views\Contact\ContactCreate.cshtml" />
+    <Content Include="Views\Contact\ContactEdit.cshtml" />
+    <Content Include="Views\Contact\ContactList.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

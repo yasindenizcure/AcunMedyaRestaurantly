@@ -10,48 +10,36 @@
 
 <body>
 
-    <!-- ======= Top Bar ======= -->
     @Html.Action("PartialTop", "Default")
-
-
-    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-
         <h1 class="logo me-auto me-lg-0"><a href="index.html">Restaurantly</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         @Html.Action("PartialNavbar", "Default")
 
         <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Rezervasyon Yap</a>
 
     </div>
-    </header><!-- End Header -->
-    <!-- ======= Hero Section ======= -->
+    </header>
+
     @Html.Action("PartialFeature", "Default")
 
 
     <main id="main">
 
-        <!-- ======= About Section ======= -->
+
         @Html.Action("PartialAbout", "Default")
 
-        <!-- End About Section -->
-        <!-- ======= Why Us Section ======= -->
+
+
         @Html.Action("PartialService", "Default")
 
-        <!-- End Why Us Section -->
-        <!-- ======= Menu Section ======= -->
+
         @Html.Action("PartialMenu", "Default")
 
-        <!-- End Menu Section -->
-        <!-- ======= Specials Section ======= -->
         @Html.Action("PartialSpecial", "Default")
-        <!-- End Specials Section -->
-        <!-- ======= Events Section ======= -->
-        @Html.Action("PartialEvent", "Default")<!-- End Events Section -->
-        <!-- ======= Book A Table Section ======= -->
-        <!-- End Book A Table Section -->
+
+        @Html.Action("PartialEvent", "Default")
+
         <section id="book-a-table" class="book-a-table">
             <div class="container" data-aos="fade-up">
 
@@ -66,15 +54,12 @@
                 @Html.Action("PartialBookATable", "Default")
             </div>
         </section>
-        <!-- ======= Testimonials Section ======= -->
         @Html.Action("PartialTestimonial", "Default")
-        <!-- End Testimonials Section -->
-        <!-- ======= Gallery Section ======= -->
-        @Html.Action("PartialGallery", "Default")<!-- End Gallery Section -->
-        <!-- ======= Chefs Section ======= -->
+      
+        @Html.Action("PartialGallery", "Default")
+
         @Html.Action("PartialChef", "Default")
-        <!-- End Chefs Section -->
-        <!-- ======= Contact Section ======= -->
+
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
 
@@ -102,11 +87,9 @@
 
             </div>
 
-        </section><!-- End Contact Section -->
-        <!-- End Contact Section -->
-
-    </main><!-- End #main -->
-    <!-- ======= Footer ======= -->
+        </section><
+    
+    </main>
     <footer id="footer">
         <div class="footer-top">
             <div class="container">
@@ -178,7 +161,7 @@
                 Designed by <a href="https://acunmedyaakademi.com/">AcunMedyaAkademi</a>
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </footer>
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
