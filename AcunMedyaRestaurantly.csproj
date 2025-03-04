@@ -138,6 +138,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SpecialController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Admin.cs" />
@@ -5744,6 +5745,9 @@
     <Content Include="Views\Special\SpecialList.cshtml" />
     <Content Include="Views\Special\SpecialCreate.cshtml" />
     <Content Include="Views\Special\SpecialEdit.cshtml" />
+    <Content Include="Views\Service\ServiceList.cshtml" />
+    <Content Include="Views\Service\ServiceCreate.cshtml" />
+    <Content Include="Views\Service\ServiceEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
