@@ -1,0 +1,92 @@
+﻿@model List<AcunMedyaRestaurantly.Entities.Reservation>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Ana Sayfa</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Rezervasyon Listesi</a></li>
+        </ol>
+    </div>
+</div>
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Rezervasyon Listesi</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover verticle-middle">
+                            <thead>
+                                <tr>
+                                    <th>Ad</th>
+                                    <th>Email</th>
+                                    <th>Telefon</th>
+                                    <th>Açıklama</th>
+                                    <th>Tarih</th>
+                                    <th>Saat</th>
+                                    <th>Misafir Sayısı</th>
+                                    <th>Reservasyon Durumu</th>
+                                    <th>Seçenekler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Name</td>
+                                        <td><a href="mailto:@item.Email">@item.Email</a></td>
+                                        <td><a href="tel:@item.Phone">@item.Phone</a></td>
+                                        <td>@item.Description</td>
+                                        <td>@item.ReservationDate.ToString("dd.MM.yyyy")</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.GuestCount</td>
+                                        @switch (item.ReservationStatus)
+                                        {
+                                            case "Onaylandı":
+                                                <td style="color:green" align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+                                            case "Beklemede":
+                                                <td style="color:darkorange" align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+                                            case "Reddedildi":
+                                                <td style="color:red" align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+                                            default:
+                                                <td align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+
+                                        }
+
+                                        <td align="center" class="px-10 py-2">
+
+                                            <a href="/Reservation/ApproveReservation/@item.ReservationId" class="btn btn-check gradient-1">Onaylandı</a>
+                                            <br />
+                                            <br />
+                                            <a href="/Reservation/HoldReservation/@item.ReservationId" class="btn btn-check gradient-5"> Beklemede</a>
+                                            <br />
+                                            <br />
+                                            <a href="/Reservation/RejectReservation/@item.ReservationId" class="btn btn-check gradient-9">Reddedildi</a>
+                                        </td>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

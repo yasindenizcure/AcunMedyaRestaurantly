@@ -7,7 +7,9 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace AcunMedyaRestaurantly.Controllers
+    
 {
+    [Authorize]
     public class EventController : Controller
     {
         // GET: Event

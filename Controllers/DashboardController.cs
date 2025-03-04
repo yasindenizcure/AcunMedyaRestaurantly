@@ -25,5 +25,6 @@ namespace AcunMedyaRestaurantly.Controllers
             var values = db.Reservations.ToList();
             return PartialView(values);
         }
+
+        }
     }
-}

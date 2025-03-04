@@ -140,6 +140,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SpecialController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
@@ -217,15 +218,19 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\alain-ducasse.jpg" />
     <Content Include="images\Arda-Turkmen.jpg" />
     <Content Include="images\dogum-gunu.jpg" />
+    <Content Include="images\gordon-ramsey.jpg" />
     <Content Include="images\is-yemegi.jpg" />
+    <Content Include="images\mc-ferran-adria.jpg" />
     <Content Include="images\Mehmet-Yalcinkaya.jpg" />
     <Content Include="images\Refika-Birgul.jpg" />
     <Content Include="images\restaurant1.png" />
     <Content Include="images\restaurant2.jpeg" />
     <Content Include="images\restaurant3.jpg" />
     <Content Include="images\restaurant4.jpg" />
+    <Content Include="images\thomas-keller.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -5760,6 +5765,10 @@
     <Content Include="Views\Event\EventList.cshtml" />
     <Content Include="Views\Event\EventCreate.cshtml" />
     <Content Include="Views\Event\EventEdit.cshtml" />
+    <Content Include="Views\Reservation\ReservationList.cshtml" />
+    <Content Include="Views\Reservation\Index.cshtml" />
+    <Content Include="Views\Reservation\ReservationEdit.cshtml" />
+    <Content Include="Views\Reservation\ReservationCreate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
