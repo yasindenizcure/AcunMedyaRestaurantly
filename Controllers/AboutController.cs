@@ -19,12 +19,17 @@ namespace AcunMedyaRestaurantly.Controllers
             var value = db.Abouts.ToList();
             return View(value);
         }
-        public ActionResult AboutList()
+        public ActionResult AboutList(string searchText)
         {
+            List<About> values;
+            if (searchText != null)
+            {
+                values = db.Abouts.Where(x => x.Title.Contains(searchText)).ToList();
+                return View(values);
+            }
             var value = db.Abouts.ToList();
             return View(value);
         }
-        [HttpGet]
         public ActionResult AboutCreate()
         {
             return View();

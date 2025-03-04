@@ -1,14 +1,15 @@
-﻿@model List<AcunMedyaRestaurantly.Entities.About>
+﻿@model List<AcunMedyaRestaurantly.Entities.Special>
 @{
-    ViewBag.Title = "AboutList";
+    ViewBag.Title = "SpecialList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
+
 
 <div class="row page-titles mx-0">
     <div class="col p-md-0">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Hakkında</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Ürünler</a></li>
         </ol>
     </div>
 </div>
@@ -28,13 +29,14 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        <h4>Hakkında</h4>
+                        <h4>Spesiyal</h4>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>Başlık</th>
+                                    <th>Özet</th>
                                     <th>Açıklama</th>
                                     <th>Resim</th>
                                     <th>Sil</th>
@@ -47,16 +49,17 @@
                                 {
                                     <tr>
                                         <th>@item.Title</th>
-                                        <td>@item.Description</td>
+                                        <td>@item.ShortDescription</td>
+                                        <td>@item.FullDescription</td>
                                         <td><img src="@item.ImageUrl" style="width:100px; height:100px" /></td>
 
                                         <td>
-                                            <a href="/About/AboutDelete/@item.AboutId" class="btn btn-danger">
+                                            <a href="/Special/SpecialDelete/@item.SpecialId" class="btn btn-danger">
                                                 <i class="fa fa-close color-muted m-r-5"></i>Sil
                                             </a>
                                         </td>
 
-                                        <td><a href="/About/AboutEdit/@item.AboutId" class="btn btn-info gradient-2">Güncelle</a></td>
+                                        <td><a href="/Special/SpecialEdit/@item.SpecialId" class="btn btn-info gradient-2">Güncelle</a></td>
 
                                     </tr>
                                 }
@@ -64,7 +67,7 @@
 
                             </tbody>
                         </table>
-                        <a href="/About/AboutCreate" class="btn btn-success">Hakkında Ekle</a>
+                        <a href="/Special/SpecialCreate" class="btn btn-success">Spesiyal Ekle</a>
                     </div>
                 </div>
             </div>
