@@ -130,6 +130,7 @@
     <Compile Include="Context\RestaurantlyContext.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\BookATableController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
@@ -5776,6 +5777,9 @@
     <Content Include="Views\Contact\ContactEdit.cshtml" />
     <Content Include="Views\Contact\ContactList.cshtml" />
     <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Views\BookATable\BookATableCreate.cshtml" />
+    <Content Include="Views\BookATable\BookATableList.cshtml" />
+    <Content Include="Views\BookATable\BookATableEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
