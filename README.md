@@ -1,38 +1,38 @@
 # AcunMedyaRestaurantly
 
-🚀 Acunmedya Akademi başladığım C# programlama eğitim yolculuğumdaki ikinci projem olan Admin Panel'li Restoran projemi paylaşmaktan mutluluk duyuyorum. Bu Proje ASP.NET MVC ve Code First Yaklaşımı kullanılarak geliştirilmiştir. Proje, restoranın menü yönetimi, sipariş takibi ve müşteri işlemlerini kolaylaştırmayı amaçlamaktadır.
+🔥 Acunmedya Akademi başladığım C# programlama eğitim yolculuğumdaki ikinci projem olan Admin Panel'li Restoran projemi paylaşmaktan mutluluk duyuyorum. Bu Proje ASP.NET MVC ve Code First Yaklaşımı kullanılarak geliştirilmiştir. Proje, restoranın menü yönetimi, sipariş takibi ve müşteri işlemlerini kolaylaştırmayı amaçlamaktadır.
 
 🔧 **Kullanılan Teknolojiler**
 
 --------------------------------------------------
 
-● ASP.Net MVC
+● ASP.Net MVC📌
 
-● LINQ Sorgular
+● LINQ Sorgular🔍
 
-● Model, View, Controller
+● Model, View, Controller🎯
 
-● 404 Sayfası
+● 404 Sayfası🛠
 
-● Layout Kontrolü
+● Layout Kontrolü🚧
 
-● Code First yaklaşımı
+● Code First yaklaşımı🕵
 
-● Partial View Kullanımı
+● Partial View Kullanımı🎩
 
-● Temel CRUD İşlemleri
+● Temel CRUD İşlemleri👀
 
-● Entity Framework Sorguları
+● Entity Framework Sorguları🔒
 
-● Bootstrap Kullanımı
+● Bootstrap Kullanımı🦸
 
-● Veritabanı Yönetimi (MSSQL)
+● Veritabanı Yönetimi (MSSQL)📁
 
-● Authorize, AllowAnonymous İşlemleri
+● Authorize, AllowAnonymous İşlemleri🎭
 
-● Session & Cookie
+● Session & Cookie🍪
 
-● Razor View Engine
+● Razor View Engine⚡
 
 --------------------------------------------------
 🚀 **Ana Sayfa**
